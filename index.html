@@ -1,11 +1,35 @@
-<!DOCTYPE html>
-<html lang="fi">
-<head>
-    <meta charset="UTF-8">
-    <title>Tulospalvelu</title>
+<!DOCTYPE html><html><head>
+<meta charset="utf-8">
+<title>Tulospalvelu</title>
+<style>
+body{font-family:Arial}
+table{border-collapse:collapse;margin:auto}
+th,td{padding:4px 10px}
+th{background:#f0f0f0;border-top:1px solid black;border-bottom:1px solid black}
+.group-end td{border-bottom:1px solid black}
+.{cursor:default;background:#fff}
+#titleBtn{background:white;font-weight:bold;border-radius:8px;padding:6px 22px;border:0;font-size:20px;cursor:default}
+.panel{background:#E6E6FF;padding:10px;border:1px solid #6F8FAF;border-radius:14px;max-width:360px;margin:12px auto;font-size:12px}
+.panel-grid{display:grid;grid-template-columns:repeat(3,auto);gap:40px;justify-content:center}
+.update-box{display:flex;align-items:center}
+.update-main{width:60px;height:50px;border-radius:8px;border:1px solid #555;font-weight:bold;cursor:default;font-size:12px;background:#fff}
+.update-btn{width:20px;height:20px;border:1px solid #555;border-radius:4px;font-weight:bold;font-size:14px;cursor:default;margin:5px;display:flex;align-items:center;justify-content:center;padding:0}
+.print-btn{background:#f0f0f0;font-weight:bold;border-radius:8px;width:70px;padding:4px 14px;border:1px solid #555;cursor:default}
+.footer{text-align:center;font-size:12px;margin:8px}
+@media print{.panel{display:none}}
+</style>
 </head>
 <body>
-    <h1>Tulokset</h1>
-    <p>Päivitetty: 2026-02-22 17:12:05</p>
-</body>
-</html>
+
+<div style="text-align:center;margin:6px">
+<button id="titleBtn" >Tulostaulukko NoSA</button>
+</div>
+
+<table id="resultsTable">
+<thead>
+<tr><th style="text-align:left">Laji Srj</th><th style="text-align:left">Sija</th><th style="text-align:left">Nimi</th><th style="text-align:left">Seura</th><th style="text-align:center">Tulos</th><th style="text-align:center">Navat</th><th style="text-align:center">S1</th><th style="text-align:center">S2</th><th style="text-align:center">S3</th><th style="text-align:center">S4</th><th style="text-align:center">S5</th><th style="text-align:center">S6</th><th style="text-align:center">Ave</th><th style="text-align:center">Last</th><th style="text-align:left">Huom</th></tr>
+</thead>
+<tbody></tbody>
+</table>
+
+</body></html>
