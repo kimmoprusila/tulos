@@ -33,11 +33,11 @@ th{background:#f0f0f0;border-top:1px solid black;border-bottom:1px solid black}
 .footer{text-align:center;font-size:12px;margin:8px}
 @media print{.panel{display:none}}
 </style>
-<title>A</title></head>
+<title>AAA</title></head>
 <body>
 
 <div style="text-align:center;margin:6px">
-<button id="titleBtn" >A</button>
+<button id="titleBtn" >AAA</button>
 </div>
 
 <table id="resultsTable">
@@ -87,7 +87,7 @@ th{background:#f0f0f0;border-top:1px solid black;border-bottom:1px solid black}
 
 <script>
 const COLS=["Laji Srj", "Sija", "Nimi", "Seura", "Tulos", "Navat", "S1", "S2", "S3", "S4", "S5", "S6", "Ave", "Last", "Shots", "Huom"];
-const LEFT=["Huom", "Seura", "Sija", "Nimi", "Laji Srj"];
+const LEFT=["Seura", "Nimi", "Laji Srj", "Sija", "Huom"];
 let rowsData=[];
 let previousRanks={};
 let intervalSec=10;
@@ -231,14 +231,6 @@ function makeCopy(){
  });
 }
 
-copyCB.onchange=function(){
- if(this.checked){
-   makeCopy();
-   copyTimer=setInterval(makeCopy,30000);
- }else{
-   clearInterval(copyTimer);
- }
-};
 
 // ---------- UPDATE TIMER ----------
 function setBtn(){
