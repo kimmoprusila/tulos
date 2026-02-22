@@ -1,11 +1,299 @@
-<!DOCTYPE html>
-<html lang="fi">
-<head>
-    <meta charset="UTF-8">
-    <title>Tulospalvelu</title>
+<!DOCTYPE html><html><head>
+<meta http-equiv="refresh" content="30">
+<meta charset="utf-8">
+<style>
+body{font-family:Arial}
+table{border-collapse:collapse;margin:auto}
+th,td{padding:4px 10px}
+th{background:#f0f0f0;border-top:1px solid black;border-bottom:1px solid black}
+.group-end td{border-bottom:1px solid black}
+.{cursor:default;background:#fff}
+.rank-improved{background:#8fdd8f !important;}
+#titleBtn{background:white;font-weight:bold;border-radius:8px;padding:6px 22px;border:0;font-size:20px;cursor:default}
+.panel{background:#E6E6FF;padding:10px;border:1px solid #6F8FAF;border-radius:14px;max-width:360px;margin:12px auto;font-size:12px}
+.panel-grid{display:grid;grid-template-columns:repeat(3,auto);gap:40px;justify-content:center}
+.update-box{display:flex;align-items:center}
+.update-main{width:60px;height:50px;border-radius:8px;border:1px solid #555;font-weight:bold;cursor:default;font-size:12px;background:#fff}
+.update-side{display:flex;flex-direction:column;align-items:center}
+.update-btn {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #555;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.print-btn{background:#f0f0f0;font-weight:bold;border-radius:8px;width:70px;padding:4px 14px;border:1px solid #555;cursor:default}
+.footer{text-align:center;font-size:12px;margin:8px}
+@media print{.panel{display:none}}
+</style>
 </head>
 <body>
-    <h1>Tulokset</h1>
-    <p>Päivitetty: 2026-02-22 17:08:10</p>
-</body>
-</html>
+
+<div style="text-align:center;margin:6px">
+<button id="titleBtn" >Tulostaulukko NoSA</button>
+</div>
+
+<table id="resultsTable">
+<thead>
+<tr>
+
+<th style="text-align: left">Sarja</th>
+
+<th style="text-align: left">Sija</th>
+
+<th style="text-align: left">Nimi</th>
+
+<th style="text-align: left">Seura</th>
+
+<th style="text-align: center">Tulos</th>
+
+<th style="text-align: center">Napa</th>
+
+<th style="text-align: center">S1</th>
+
+<th style="text-align: center">S2</th>
+
+<th style="text-align: center">S3</th>
+
+<th style="text-align: center">S4</th>
+
+<th style="text-align: center">S5</th>
+
+<th style="text-align: center">S6</th>
+
+<th style="text-align: center">K.a.</th>
+
+<th style="text-align: center">Viim.</th>
+
+<th style="text-align: center">Ls.</th>
+
+<th style="text-align: left; display: none;">Huom!</th>
+
+</tr>
+</thead>
+<tbody><tr data-grp="Kiv 10IT" data-shots="20"><td style="text-align: left;">Kiv 10IT</td><td style="text-align: left;">1</td><td style="text-align: left;">Olli VÄKEVÄINEN</td><td style="text-align: left;">KaA</td><td style="text-align: center;">287.2</td><td style="text-align: center;">-</td><td style="text-align: center;">91.0</td><td style="text-align: center;">96.2</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">14.36</td><td style="text-align: center;">10.5</td><td style="text-align: center;">20</td><td class="" style="text-align: left; display: none;">9:22</td></tr><tr data-grp="Kiv 10IT" data-shots="20" class="group-end"><td style="text-align: left;">Kiv 10IT</td><td style="text-align: left;">2</td><td style="text-align: left;">Ellen LEPPÄNIEMI</td><td style="text-align: left;">KaA</td><td style="text-align: center;">203.0</td><td style="text-align: center;">-</td><td style="text-align: center;">101.9</td><td style="text-align: center;">101.1</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">10.15</td><td style="text-align: center;">9.9</td><td style="text-align: center;">20</td><td class="" style="text-align: left; display: none;">-</td></tr><tr data-grp="Kiv M" data-shots="60" class="group-end"><td style="text-align: left;">Kiv M</td><td style="text-align: left;">1</td><td style="text-align: left;">Aleksi VÄLIMÄKI</td><td style="text-align: left;">KaA</td><td style="text-align: center;">597.9</td><td style="text-align: center;">-</td><td style="text-align: center;">99.4</td><td style="text-align: center;">100.3</td><td style="text-align: center;">101.6</td><td style="text-align: center;">98.7</td><td style="text-align: center;">98.2</td><td style="text-align: center;">99.7</td><td style="text-align: center;">9.96</td><td style="text-align: center;">10.2</td><td style="text-align: center;">60</td><td class="" style="text-align: left; display: none;">-</td></tr><tr data-grp="Kiv N" data-shots="60" class="group-end"><td style="text-align: left;">Kiv N</td><td style="text-align: left;">1</td><td style="text-align: left;">Meri-Tuulia LEPPÄNEN</td><td style="text-align: left;">HlAS</td><td style="text-align: center;">618.4</td><td style="text-align: center;">-</td><td style="text-align: center;">103.5</td><td style="text-align: center;">104.1</td><td style="text-align: center;">103.2</td><td style="text-align: center;">102.8</td><td style="text-align: center;">102.9</td><td style="text-align: center;">101.9</td><td style="text-align: center;">10.31</td><td style="text-align: center;">9.7</td><td style="text-align: center;">60</td><td class="" style="text-align: left; display: none;">-</td></tr><tr data-grp="Pis 14VT" data-shots="30" class="group-end" style="display: none;"><td style="text-align: left;">Pis 14VT</td><td style="text-align: left;">1</td><td style="text-align: left;">JUICE LESKINEN</td><td style="text-align: left;">LAS</td><td style="text-align: center;">365</td><td style="text-align: center;">3-X</td><td style="text-align: center;">90</td><td style="text-align: center;">86</td><td style="text-align: center;">89</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">12.17</td><td style="text-align: center;">10</td><td style="text-align: center;">30</td><td class="" style="text-align: left; display: none;">-</td></tr><tr data-grp="Pis M" data-shots="60" style="display: none;"><td style="text-align: left;">Pis M</td><td style="text-align: left;">1</td><td style="text-align: left;">Veli-Matti KESÄLAHTI</td><td style="text-align: left;">ESA</td><td style="text-align: center;">536</td><td style="text-align: center;">14-X</td><td style="text-align: center;">90</td><td style="text-align: center;">92</td><td style="text-align: center;">92</td><td style="text-align: center;">91</td><td style="text-align: center;">81</td><td style="text-align: center;">90</td><td style="text-align: center;">8.93</td><td style="text-align: center;">9</td><td style="text-align: center;">60</td><td class="" style="text-align: left; display: none;">-</td></tr><tr data-grp="Pis M" data-shots="60" class="group-end" style="display: none;"><td style="text-align: left;">Pis M</td><td style="text-align: left;">1</td><td style="text-align: left;">V-M KESÄLAHTI</td><td style="text-align: left;">ESA</td><td style="text-align: center;">536</td><td style="text-align: center;">14-X</td><td style="text-align: center;">90</td><td style="text-align: center;">92</td><td style="text-align: center;">92</td><td style="text-align: center;">91</td><td style="text-align: center;">81</td><td style="text-align: center;">90</td><td style="text-align: center;">8.93</td><td style="text-align: center;">9</td><td style="text-align: center;">60</td><td class="" style="text-align: left; display: none;">-</td></tr><tr data-grp="Pis N" data-shots="60" style="display: none;"><td style="text-align: left;">Pis N</td><td style="text-align: left;">1</td><td style="text-align: left;">Iida-Maria TUOMAINEN</td><td style="text-align: left;">AsAs</td><td style="text-align: center;">539</td><td style="text-align: center;">8-X</td><td style="text-align: center;">93</td><td style="text-align: center;">94</td><td style="text-align: center;">90</td><td style="text-align: center;">84</td><td style="text-align: center;">88</td><td style="text-align: center;">90</td><td style="text-align: center;">8.98</td><td style="text-align: center;">9</td><td style="text-align: center;">60</td><td class="" style="text-align: left; display: none;">-</td></tr><tr data-grp="Pis N" data-shots="58" style="display: none;"><td style="text-align: left;">Pis N</td><td style="text-align: left;">2</td><td style="text-align: left;">Sara ELOMÄKI</td><td style="text-align: left;">TSA</td><td style="text-align: center;">525</td><td style="text-align: center;">8-X</td><td style="text-align: center;">91</td><td style="text-align: center;">87</td><td style="text-align: center;">85</td><td style="text-align: center;">86</td><td style="text-align: center;">86</td><td style="text-align: center;">90</td><td style="text-align: center;">9.05</td><td style="text-align: center;">9</td><td style="text-align: center;">58</td><td class="" style="text-align: left; display: none;">-</td></tr><tr data-grp="Pis N" data-shots="60" class="group-end" style="display: none;"><td style="text-align: left;">Pis N</td><td style="text-align: left;">3</td><td style="text-align: left;">Liisa ALANKO</td><td style="text-align: left;">K-64</td><td style="text-align: center;">60</td><td style="text-align: center;">4-X</td><td style="text-align: center;">88</td><td style="text-align: center;">78</td><td style="text-align: center;">82</td><td style="text-align: center;">83</td><td style="text-align: center;">89</td><td style="text-align: center;">91</td><td style="text-align: center;">1.00</td><td style="text-align: center;">9</td><td style="text-align: center;">60</td><td class="" style="text-align: left; display: none;">-</td></tr><tr data-grp="Pis Y70" data-shots="40" style="display: none;"><td style="text-align: left;">Pis Y70</td><td style="text-align: left;">1</td><td style="text-align: left;">Veijo PIIRONEN</td><td style="text-align: left;">P-HA</td><td style="text-align: center;">442</td><td style="text-align: center;">4-X</td><td style="text-align: center;">82</td><td style="text-align: center;">89</td><td style="text-align: center;">89</td><td style="text-align: center;">82</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">11.05</td><td style="text-align: center;">8</td><td style="text-align: center;">40</td><td class="" style="text-align: left; display: none;">-</td></tr><tr data-grp="Pis Y70" data-shots="40" class="group-end" style="display: none;"><td style="text-align: left;">Pis Y70</td><td style="text-align: left;">2</td><td style="text-align: left;">Jouko LEHIKOINEN</td><td style="text-align: left;">ESA</td><td style="text-align: center;">350</td><td style="text-align: center;">2-X</td><td style="text-align: center;">90</td><td style="text-align: center;">89</td><td style="text-align: center;">83</td><td style="text-align: center;">88</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">8.75</td><td style="text-align: center;">8</td><td style="text-align: center;">40</td><td class="" style="text-align: left; display: none;">-</td></tr><tr data-grp="Pis Y75" data-shots="40" style="display: none;"><td style="text-align: left;">Pis Y75</td><td style="text-align: left;">1</td><td style="text-align: left;">Olavi KIVELÄ</td><td style="text-align: left;">NoSA</td><td style="text-align: center;">330</td><td style="text-align: center;">4-X</td><td style="text-align: center;">88</td><td style="text-align: center;">81</td><td style="text-align: center;">85</td><td style="text-align: center;">76</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">8.25</td><td style="text-align: center;">7</td><td style="text-align: center;">40</td><td class="" style="text-align: left; display: none;">-</td></tr><tr data-grp="Pis Y75" data-shots="39" style="display: none;"><td style="text-align: left;">Pis Y75</td><td style="text-align: left;">2</td><td style="text-align: left;">Leo ARMINEN</td><td style="text-align: left;">K-64</td><td style="text-align: center;">305</td><td style="text-align: center;">0-X</td><td style="text-align: center;">72</td><td style="text-align: center;">78</td><td style="text-align: center;">79</td><td style="text-align: center;">66</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">7.82</td><td style="text-align: center;">6</td><td style="text-align: center;">39</td><td class="" style="text-align: left; display: none;">LEO</td></tr><tr data-grp="Pis Y75" data-shots="0" style="display: none;"><td style="text-align: left;">Pis Y75</td><td style="text-align: left;">DNS</td><td style="text-align: left;">Erkki KIVINEN</td><td style="text-align: left;">P-HA</td><td style="text-align: center;">0</td><td style="text-align: center;">0-X</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">0</td><td class="" style="text-align: left; display: none;">-</td></tr><tr data-grp="Pis Y75" data-shots="0" class="group-end" style="display: none;"><td style="text-align: left;">Pis Y75</td><td style="text-align: left;">DNS</td><td style="text-align: left;">E KIVINEN</td><td style="text-align: left;">P-HA</td><td style="text-align: center;">0</td><td style="text-align: center;">0-X</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">0</td><td class="" style="text-align: left; display: none;">DNS</td></tr><tr data-grp="Pis Y80" data-shots="40" style="display: none;"><td style="text-align: left;">Pis Y80</td><td style="text-align: left;">1</td><td style="text-align: left;">Jorma LAAKSO</td><td style="text-align: left;">K-64</td><td style="text-align: center;">320</td><td style="text-align: center;">0-X</td><td style="text-align: center;">84</td><td style="text-align: center;">81</td><td style="text-align: center;">76</td><td style="text-align: center;">79</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">8.00</td><td style="text-align: center;">9</td><td style="text-align: center;">40</td><td class="" style="text-align: left; display: none;">-</td></tr><tr data-grp="Pis Y80" data-shots="40" class="group-end" style="display: none;"><td style="text-align: left;">Pis Y80</td><td style="text-align: left;">1</td><td style="text-align: left;">J LAAKSO</td><td style="text-align: left;">K-64</td><td style="text-align: center;">320</td><td style="text-align: center;">0-X</td><td style="text-align: center;">84</td><td style="text-align: center;">81</td><td style="text-align: center;">76</td><td style="text-align: center;">79</td><td style="text-align: center;">-</td><td style="text-align: center;">-</td><td style="text-align: center;">8.00</td><td style="text-align: center;">9</td><td style="text-align: center;">40</td><td class="" style="text-align: left; display: none;">Jorma</td></tr></tbody>
+</table>
+
+<div class="footer">Nokian Seudun Ampujat ry</div>
+
+
+
+<script>
+const COLS=["Laji Srj", "Sija", "Nimi", "Seura", "Tulos", "Navat", "S1", "S2", "S3", "S4", "S5", "S6", "Ave", "Last", "Shots", "Huom"];
+const LEFT=["Seura", "Sija", "Huom", "Laji Srj", "Nimi"];
+let rowsData=[];
+let previousRanks={};
+let intervalSec=10;
+let running=true;
+let timer=null;
+let holdTimer=null;
+let repeatTimer=null;
+let copyTimer=null;
+
+// ---------- TITLE & DATA ----------
+function editTitle(){
+ let t=prompt("Uusi otsikko:");
+ if(t){
+  titleBtn.innerText=t;
+  document.title=t;
+ }
+}
+
+
+
+function fetchData(){
+ fetch("/data").then(r=>r.json()).then(d=>{
+   rowsData=d.rows;
+   render();
+   applyCols();
+   applyFilter();
+   applySort();
+   updMain.style.background=running?"#8fdd8f":"#ff9b9b";
+
+   // 🔴 TÄRKEÄ LISÄYS
+   makeCopy();
+ });
+}
+
+
+
+
+// ---------- RENDER ----------
+function render(){
+ const tb=document.querySelector("#resultsTable tbody");
+ tb.innerHTML="";
+ rowsData.forEach(r=>{
+  let tr=document.createElement("tr");
+  tr.dataset.grp=r["Laji Srj"];
+  tr.dataset.shots=r["Shots"];
+
+  let key=r["Laji Srj"]+"|"+r["Nimi"];
+  let newRank=parseInt(r["Sija"]);
+  if(!isNaN(newRank)){
+      let oldRank=previousRanks[key];
+      if(oldRank && newRank < oldRank){
+          tr.classList.add("rank-improved");
+          setTimeout(()=>tr.classList.remove("rank-improved"),3000);
+      }
+      previousRanks[key]=newRank;
+  }
+
+  COLS.forEach(k=>{
+   let td=document.createElement("td");
+   td.textContent=r[k];
+   td.style.textAlign=LEFT.includes(k)?"left":"center";
+
+   if(k=="Huom"){
+     td.classList.add("");
+     td.onclick=()=>{  // vain live-sivulla sallittu
+       let txt=prompt("Huomautus:",r[k]=="-"?"":r[k]);
+       if(txt===null) return;
+       fetch("/save_note",{
+        method:"POST",
+        headers:{"Content-Type":"application/json"},
+        body:JSON.stringify({laji:r["Laji Srj"],nimi:r["Nimi"],huom:txt})
+       }).then(fetchData);
+     };
+   }
+
+   tr.appendChild(td);
+  });
+  tb.appendChild(tr);
+ });
+ updateGroupLines();
+}
+
+function updateGroupLines(){
+ let rows=[...document.querySelectorAll("#resultsTable tbody tr")].filter(r=>r.style.display!="none");
+ rows.forEach(r=>r.classList.remove("group-end"));
+ for(let i=0;i<rows.length-1;i++){
+  if(rows[i].dataset.grp!=rows[i+1].dataset.grp)
+    rows[i].classList.add("group-end");
+ }
+ if(rows.length) rows[rows.length-1].classList.add("group-end");
+}
+
+// ---------- FILTER & SORT ----------
+function applyFilter(){
+ let sel=[...document.querySelectorAll(".lajiCB")].filter(x=>x.checked).map(x=>x.value);
+ let showDNS=shotsCB.checked;
+ document.querySelectorAll("#resultsTable tbody tr").forEach(r=>{
+  let okSeries=sel.includes(r.dataset.grp);
+  let shots=parseInt(r.dataset.shots)||0;
+  let okShots=showDNS||shots>0;
+  r.style.display=(okSeries&&okShots)?"":"none";
+ });
+ updateGroupLines();
+}
+
+function applyCols(){
+ let show=[...document.querySelectorAll(".colCB")].filter(x=>x.checked).map(x=>x.value);
+ document.querySelectorAll("#resultsTable tr").forEach(row=>{
+  [...row.cells].forEach((c,i)=>{
+   c.style.display=show.includes(COLS[i])?"":"none";
+  });
+ });
+}
+
+function applySort(){
+ let mode=document.querySelector("input[name=sort]:checked").value;
+ let idx=COLS.indexOf(mode);
+ let rows=[...document.querySelectorAll("#resultsTable tbody tr")];
+ let groups={};
+ rows.forEach(r=>{
+  if(!groups[r.dataset.grp]) groups[r.dataset.grp]=[];
+  groups[r.dataset.grp].push(r);
+ });
+ Object.values(groups).forEach(g=>{
+  g.sort((a,b)=>
+   parseFloat(b.cells[idx].innerText||0) - parseFloat(a.cells[idx].innerText||0)
+  );
+  g.forEach(r=>resultsTable.tBodies[0].appendChild(r));
+ });
+ updateGroupLines();
+}
+
+// ---------- COPY ----------
+function makeCopy(){
+ let clone=document.documentElement.cloneNode(true);
+ clone.querySelectorAll(".panel").forEach(e=>e.remove());
+ fetch("/save_copy",{
+  method:"POST",
+  headers:{"Content-Type":"application/json"},
+  body:JSON.stringify({html:"<!DOCTYPE html>"+clone.outerHTML})
+ });
+}
+
+copyCB.onchange=function(){
+ if(this.checked){
+   makeCopy();
+   copyTimer=setInterval(makeCopy,30000);
+ }else{
+   clearInterval(copyTimer);
+ }
+};
+
+// ---------- UPDATE TIMER ----------
+function setBtn(){
+ updMain.innerText=intervalSec+" sek";
+ updMain.style.background=running?"#8fdd8f":"#ff9b9b";
+}
+
+function startTimer(){
+ if(timer) clearInterval(timer);
+ if(!running) return;
+ timer=setInterval(fetchData,intervalSec*1000);
+}
+
+function toggleUpdate(){
+ running=!running;
+ setBtn();
+ startTimer();
+}
+
+function changeInterval(d){
+ intervalSec=Math.min(30,Math.max(1,intervalSec+d));
+ setBtn();
+ startTimer();
+}
+
+function startHold(d){
+ changeInterval(d);
+ holdTimer=setTimeout(()=>{
+  repeatTimer=setInterval(()=>changeInterval(d),200);
+ },400);
+}
+
+function stopHold(){
+ clearTimeout(holdTimer);
+ clearInterval(repeatTimer);
+}
+
+btnMinus.onmousedown=()=>startHold(-1);
+btnPlus.onmousedown=()=>startHold(1);
+btnMinus.onmouseup=stopHold;
+btnPlus.onmouseup=stopHold;
+btnMinus.onmouseleave=stopHold;
+btnPlus.onmouseleave=stopHold;
+btnMinus.ontouchstart=e=>{e.preventDefault();startHold(-1);}
+btnPlus.ontouchstart=e=>{e.preventDefault();startHold(1);}
+btnMinus.ontouchend=stopHold;
+btnPlus.ontouchend=stopHold;
+updMain.onclick=toggleUpdate;
+
+// ---------- INITIALIZE ----------
+setBtn();
+startTimer();
+fetchData();
+
+</script>
+
+
+</body></html>
